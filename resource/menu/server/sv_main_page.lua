@@ -55,7 +55,7 @@ RegisterNetEvent('txsv:req:healEveryone', function()
   if allow then
     -- For use with third party resources that handle players
     -- 'revive state' standalone from health (esx-ambulancejob, qb-ambulancejob, etc)
-    TriggerEvent('txAdmin:events:healedPlayer', {id = -1})
+    TriggerEvent('txAdmin:events:healedPlayer', { id = -1, admin = src })
     TriggerClientEvent('txcl:heal', -1)
   end
 end)
@@ -67,7 +67,7 @@ RegisterNetEvent('txsv:req:healMyself', function()
   if allow then
     -- For use with third party resources that handle players
     -- 'revive state' standalone from health (esx-ambulancejob, qb-ambulancejob, etc)
-    TriggerEvent('txAdmin:events:healedPlayer', {id = src})
+    TriggerEvent('txAdmin:events:healedPlayer', { id = src, admin = src })
     TriggerClientEvent('txcl:heal', src)
   end
 end)
@@ -85,7 +85,7 @@ RegisterNetEvent('txsv:req:healPlayer', function(id)
       -- For use with third party resources that handle players
       -- 'revive state' standalone from health (esx-ambulancejob, qb-ambulancejob, etc)
       -- TriggerEvent('txAdmin:healedPlayer', id)
-      TriggerEvent('txAdmin:events:healedPlayer', {id = id})
+      TriggerEvent('txAdmin:events:healedPlayer', { id = id, admin = src })
       TriggerClientEvent('txcl:heal', id)
     end
   end
