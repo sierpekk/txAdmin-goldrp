@@ -62,6 +62,7 @@ export default class AdminVault {
             'players.spectate': 'Spectate', //self playermode, and also the player spectate option
             'players.teleport': 'Teleport', //self teleport, and the bring/go to on player modal
             'players.troll': 'Troll Actions', //all the troll options in the player modal
+            'players.showdistance': 'Show Distance To Player', //show distance to player
         };
         this.hardConfigs = {
             refreshInterval: 15e3,

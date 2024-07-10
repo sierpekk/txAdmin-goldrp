@@ -1,9 +1,11 @@
 ## Permission System
+
 The permission system allows you to control which admins can perform which actions.
 For instance you can allow one admin to only view the console and kick players, but not restart the server and execute arbitrary commands.
-The permissions are saved in the `txData/admins.json` file and can be edited through the *Admin Manager* page by the Master admin, or users with `all_permissions` or `manage.admins` permissions.
+The permissions are saved in the `txData/admins.json` file and can be edited through the _Admin Manager_ page by the Master admin, or users with `all_permissions` or `manage.admins` permissions.
 
 ### Available Permissions
+
 - `all_permissions`: Root permission that allows the user to perform any action. When set, this will remove all other permissions;
 - `manage.admins`: Permission to create, edit and remove other admin accounts;
 - `settings.view`: Settings: View (no tokens);
@@ -26,3 +28,4 @@ The permissions are saved in the `txData/admins.json` file and can be edited thr
 - `players.teleport`: Teleport self or player;
 - `players.trollmenu`: Troll Menu;
 - `players.freeze`: Freeze a players ped;
+- `players.showdistance`: Show distance to player
